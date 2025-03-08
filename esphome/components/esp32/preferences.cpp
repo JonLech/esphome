@@ -108,8 +108,7 @@ class ESP32Preferences : public ESPPreferences {
   }
 
   bool sync() override {
-    if (s_pending_save.empty())
-      return true;
+    return true;
 
     ESP_LOGD(TAG, "Saving %d preferences to flash...", s_pending_save.size());
     // goal try write all pending saves even if one fails

@@ -390,7 +390,7 @@ void APIServer::on_shutdown() {
   for (auto &c : this->clients_) {
     c->send_disconnect_request(DisconnectRequest());
   }
-  delay(1000);
+  delay(5000);
 }
 
 #ifdef USE_ALARM_CONTROL_PANEL
